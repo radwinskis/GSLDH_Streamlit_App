@@ -608,7 +608,8 @@ palette_choice = st.sidebar.selectbox(
 # ---------------------------------------------------------
 # 5. Map Rendering
 # ---------------------------------------------------------
-if gee_ready and selected_image_ee:
+# if gee_ready and selected_image_ee:
+if selected_image_ee:
     st.subheader(f"Viewing: {product_name}, Date: {selected_date if selected_date else 'N/A'}, Band: {viz_band}")
     if 'Days Since' in product_name:
         st.markdown("Please allow up to a minute or two for the 'Days Since Last Water' products to render, as they are calculated on-the-fly.")
