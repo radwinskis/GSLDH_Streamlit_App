@@ -676,11 +676,11 @@ if selected_image_ee:
 
     if perry_survey_vis_options == "Hotspot Polygons":
         Map.addLayer(ee.FeatureCollection(PERRY_SURVEY_ASSETS["Hotspot Polygons"]),
-                     vis_params={'opacity': 0.6},
+                     vis_params={'color': 'red', 'opacity': 0.7},
             name="Perry Hotspot Polygons")
     elif perry_survey_vis_options == "Hotspot Points":
-        Map.addLayer(ee.FeatureCollection(PERRY_SURVEY_ASSETS["Hotspot Points"]),
-                     vis_params={'opacity': 0.6},
+        Map.addLayer(ee.FeatureCollection(PERRY_SURVEY_ASSETS["Hotspot Survey Points"]),
+                     vis_params={'color': 'red', 'opacity': 0.7},
             name="Perry Hotspot Points")
     elif perry_survey_vis_options == "None":
         pass
