@@ -13,4 +13,4 @@ jobs:
     steps:
       - name: Ping Streamlit App
         # Replace the URL below with your actual Streamlit app URL
-        run: curl -sL "https://gsldh-satellite-imagery.streamlit.app/" > /dev/null
+        run: curl -s "https://gsldh-satellite-imagery.streamlit.app/" > /dev/null
