@@ -548,7 +548,7 @@ else:
         # rgb_image_ee = SA_collection.image_grab(target_index).select(['SR_B4', 'SR_B3', 'SR_B2'])
         rgb_image_ee = SA_collection.image_pick(str(selected_date)).select(['SR_B4', 'SR_B3', 'SR_B2'])
 
-perry_survey_vis_options = st.sidebar.dropdown("Perry Survey Options", options=["None", "Hotspot Polygons", "Hotspot Points"], index=0)
+perry_survey_vis_options = st.sidebar.selectbox("Perry Survey Options", options=["None", "Hotspot Polygons", "Hotspot Points"], index=0)
         
 
 st.sidebar.header("Visualization Options")
