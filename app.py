@@ -573,8 +573,8 @@ is_anomaly = "anomal" in product_name.lower() or "anomal" in viz_band.lower()
 is_days_since = "days since last water" in product_name.lower()
 is_percentage = "percentage" in product_name.lower()
 is_instability = "instability" in product_name.lower()
-is_LST_C = product_name == "LST"
-is_LST_F = product_name == "LST_F"
+is_LST_C = viz_band == "LST"
+is_LST_F = viz_band == "LST_F"
 
 palette_options = ["inferno", "magma", "viridis", "cividis", "reds", "blues", "rdbu", "jet", "thermal"]
 
