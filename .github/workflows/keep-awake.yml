@@ -1,0 +1,16 @@
+name: Keep Streamlit App Awake
+
+on:
+  schedule:
+    # Runs at 00:00 (midnight) every 2 days
+    - cron: '0 0 */2 * *'
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch: 
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Streamlit App
+        # Replace the URL below with your actual Streamlit app URL
+        run: curl -sL "https://gsldh-satellite-imagery.streamlit.app/" > /dev/null
