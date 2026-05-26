@@ -573,8 +573,10 @@ is_anomaly = "anomal" in product_name.lower() or "anomal" in viz_band.lower()
 is_days_since = "days since last water" in product_name.lower()
 is_percentage = "percentage" in product_name.lower()
 is_instability = "instability" in product_name.lower()
+is_LST_C = product_name == "LST"
+is_LST_F = product_name == "LST_F"
 
-palette_options = ["inferno", "magma", "viridis", "cividis", "reds", "blues", "rdbu", "jet"]
+palette_options = ["inferno", "magma", "viridis", "cividis", "reds", "blues", "rdbu", "jet", "thermal"]
 
 if is_anomaly:
     default_min = -0.2
@@ -592,6 +594,14 @@ elif is_instability:
     default_min = 0.0
     default_max = 0.6
     default_palette_index = palette_options.index("inferno")
+elif is_LST_C:
+    default_min = 0.0
+    default_max = 40.0
+    default_palette_index = palette_options.index("thermal")
+elif is_LST_F:
+    default_min = 32.0
+    default_max = 104.0
+    default_palette_index = palette_options.index("thermal")
 else:
     default_min = 0.0
     default_max = 1.0
