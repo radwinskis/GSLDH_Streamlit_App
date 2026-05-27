@@ -581,9 +581,18 @@ is_LST_F = True if "LST" in viz_band and "_F_" in viz_band else False
 palette_options = ["inferno", "magma", "viridis", "cividis", "reds", "blues", "rdbu", "jet", "thermal"]
 
 if is_anomaly:
-    default_min = -0.2
-    default_max = 0.2
-    default_palette_index = palette_options.index("rdbu")
+    if is_LST_C:
+        default_min = -10.0
+        default_max = 10.0
+        default_palette_index = palette_options.index("rdbu")
+    elif is_LST_F:
+        default_min = -20.0
+        default_max = 20.0
+        default_palette_index = palette_options.index("rdbu")
+    else:
+        default_min = -0.2
+        default_max = 0.2
+        default_palette_index = palette_options.index("rdbu")
 elif is_days_since:
     default_min = 0.0
     default_max = 100.0  # Max stretch defaults to 100
