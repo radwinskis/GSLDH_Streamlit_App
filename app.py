@@ -574,9 +574,9 @@ is_days_since = "days since last water" in product_name.lower()
 is_percentage = "percentage" in product_name.lower()
 is_instability = "instability" in product_name.lower()
 # is_LST_C = viz_band == "LST"
-is_LST_C = True if "LST" in viz_band and "_F_" not in viz_band else False
+is_LST_C = True if "LST" in viz_band and "_F" not in viz_band else False
 # is_LST_F = viz_band == "LST_F"
-is_LST_F = True if "LST" in viz_band and "_F_" in viz_band else False
+is_LST_F = True if "LST" in viz_band and "_F" in viz_band else False
 
 palette_options = ["inferno", "magma", "viridis", "cividis", "reds", "blues", "rdbu", "jet", "thermal"]
 
